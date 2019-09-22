@@ -14,19 +14,19 @@ class Node
 		next=n;
 	}
          // Define setter getter method
-	public void setData(int d)
+	public void setData(int d) //set Data
 	{
 		data=d;
 	}
-	public void setNext(Node n)
+	public void setNext(Node n) //set Data
 	{
 		next=n;
 	}
-	public int getData()
+	public int getData() //Get Data
 	{
 		return(data);
 	}
-	public Node getNext()
+	public Node getNext() // Get Data
 	{
 		return(next);
 	}
