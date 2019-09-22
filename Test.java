@@ -53,7 +53,7 @@ class LinkedList
 		return (size);
 	}
         // Insert At First
-	public void insertAtFirst(int val) 
+	public void insertAtFirst(int val) // insert at first
 	{
 		Node n;
 		n=new Node();
