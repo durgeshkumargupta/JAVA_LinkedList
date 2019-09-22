@@ -3,16 +3,17 @@ class Node
 {
 	private int data;
 	private Node next;
-	public Node()
+	public Node() //default constructor
 	{
 		data=0;
 		next=null;
 	}
-	public Node(int d,Node n)
+	public Node(int d,Node n) // parameter constructor
 	{
 		data=d;
 		next=n;
 	}
+         // Define setter getter method
 	public void setData(int d)
 	{
 		data=d;
@@ -35,23 +36,24 @@ class LinkedList
 {
 	private int size;
 	private Node start;
-	public LinkedList()
+	public LinkedList() //default constructor
 	{
 		size=0;
 		start=null;
 	}
-	public boolean isEmpty()
+	public boolean isEmpty() //check list is empty
 	{
 		if(start==null)
 			return (true);
 		else
 			return (false);
 	}
-	public int getListSize()
+	public int getListSize() // get list size
 	{
 		return (size);
 	}
-	public void insertAtFirst(int val)
+        // Insert At First
+	public void insertAtFirst(int val) 
 	{
 		Node n;
 		n=new Node();
@@ -60,7 +62,7 @@ class LinkedList
 		start=n;
 		size++;
 	}
-	public void insertAtLast(int val)
+	public void insertAtLast(int val) //insert at last
 	{
 		Node n,t;
 		n=new Node();
@@ -76,7 +78,7 @@ class LinkedList
 		}
 		size++;
 	}
-	public void insertAtPos(int val,int pos)
+	public void insertAtPos(int val,int pos) //insert at position
 	{
 		if(pos==1)
 			insertAtFirst(val);
@@ -98,7 +100,7 @@ class LinkedList
 			System.out.println("Insertion not possbile at postion "+pos);
 		}
 	}
-	public void deleteFirst()
+	public void deleteFirst() // Delete first node
 	{
 		if(start==null)
 			System.out.println("List is alreay Emplty");
@@ -108,7 +110,7 @@ class LinkedList
 			size--;
 		}
 	}
-	public void deleteLast()
+	public void deleteLast() //Delete at last node
 	{
 		if(start==null)
 			System.out.println("List is alreay Emplty");
@@ -127,7 +129,7 @@ class LinkedList
 			size--;
 		}
 	}
-	public void deleteAtPos(int pos)
+	public void deleteAtPos(int pos) //Delete at position node
 	{
 		if(start==null)
 			System.out.println("List is alreay empty");
@@ -149,7 +151,7 @@ class LinkedList
 			size--;
 		}
 	}
-	public void viewList()
+	public void viewList() // View list
 	{
 		Node t;
 		if(isEmpty())
@@ -167,9 +169,9 @@ class LinkedList
 }
 public class Test
 {
-	public static void main(String args[])
+	public static void main(String args[]) //Define main method
 	{
-		Scanner sc=new Scanner(System.in);
+		Scanner sc=new Scanner(System.in); 
 		LinkedList list=new LinkedList();
 		boolean flag=true;
 	    while(flag)
